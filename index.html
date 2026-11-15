@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="progress" aria-hidden="true"><span id="progress"></span></div>
 
 <nav class="nav" aria-label="Sections">
   <div class="wrap">
@@ -30,16 +31,39 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
-    <p class="eyebrow">PDC60 · Conversational AI</p>
-    <h1>Learning<br><span>Portfolio</span></h1>
-    <p class="lead">Learnings, activities, and the evolution of my prompts.</p>
-    <div class="who">
-      <div><strong>Toledano, Igor P.</strong></div>
-      <div>BSIT 4A</div>
-      <div>Prof. Adriane Brent Castro</div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">PDC60 · Conversational AI</p>
+      <h1>Learning<br><span>Portfolio</span></h1>
+      <p class="lead">Learnings, activities, and the evolution of my prompts.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#m1">Start with Module 1 →</a>
+        <a class="btn ghost" href="#final">See the final project</a>
+      </div>
+      <div class="who">
+        <div><strong>Toledano, Igor P.</strong></div>
+        <div>BSIT 4A</div>
+        <div>Prof. Adriane Brent Castro</div>
+      </div>
     </div>
+    <aside class="evo" aria-label="Prompt evolution demo">
+      <div class="evo-bar"><i></i><i></i><i></i><span id="evo-src">Prompt evolution</span></div>
+      <div class="evo-body">
+        <p class="tag coral">Before</p>
+        <p class="evo-before" id="evo-before"></p>
+        <p class="tag">After</p>
+        <p class="evo-after" id="evo-after"><span class="caret"></span></p>
+      </div>
+      <div class="evo-foot">
+        <button type="button" id="evo-prev" aria-label="Previous example">‹</button>
+        <span id="evo-count"></span>
+        <button type="button" id="evo-next" aria-label="Next example">›</button>
+      </div>
+    </aside>
   </div>
+  <div class="wrap hero-stats" id="hero-stats"></div>
 </header>
 
 <main>
@@ -732,6 +756,14 @@ Constraints: Never request credentials; don't invent links, deadlines or complet
     <div><a href="#top">Back to top ↑</a></div>
   </div>
 </footer>
+
+<button type="button" class="to-top" id="to-top" aria-label="Back to top">↑</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
+  <button type="button" class="lb-close" aria-label="Close">×</button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>
