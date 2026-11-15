@@ -105,19 +105,6 @@
         b.innerHTML = `Next: ${titles[i + 1].textContent} →`;
         b.addEventListener('click', () => select(i + 1, { scroll: true }));
         foot.appendChild(b);
-      } else if (mi < modules.length - 1) {
-        const next = modules[mi + 1];
-        const a = document.createElement('a');
-        a.className = 'btn';
-        a.href = '#' + next.id;
-        a.innerHTML = `Continue to ${navLabel(next.id)}: ${$('h2', next).textContent} →`;
-        foot.appendChild(a);
-      } else {
-        const a = document.createElement('a');
-        a.className = 'btn ghost';
-        a.href = '#top';
-        a.textContent = 'Back to the start ↑';
-        foot.appendChild(a);
       }
       panel.appendChild(foot);
     });
@@ -311,29 +298,56 @@
   lb.addEventListener('click', (e) => { if (e.target !== lbImg) closeLb(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
 
-  /* ---------- Nav highlight, progress bar, back-to-top ---------- */
+  /* ---------- One page per module (hash router) ---------- */
   const links = $$('.nav-links a');
   const navList = $('.nav-links');
-  const sections = links.map((a) => $(a.getAttribute('href'))).filter(Boolean);
-  const bar = $('#progress');
-  const toTop = $('#to-top');
-  let lastActive;
+  const hero = $('.hero');
+  const about = $('#about');
+  const pages = modules; // m1..m6, agentic, final
+  const pageIds = pages.map((p) => p.id);
 
-  function onScroll() {
-    const y = window.scrollY;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
-    toTop.classList.toggle('on', y > 700);
-    $('.nav').classList.toggle('scrolled', y > 10);
+  // Prev / next pager at the bottom of every module page
+  pages.forEach((page, i) => {
+    const pager = document.createElement('nav');
+    pager.className = 'pager';
+    pager.setAttribute('aria-label', 'Module pages');
+    const item = (target, dir) => {
+      if (!target) return '<span></span>';
+      const small = dir === 'prev' ? `← Previous · ${navLabel(target.id)}` : `Next · ${navLabel(target.id)} →`;
+      return `<a class="pager-${dir}" href="#${target.id}"><small>${small}</small>${$('h2', target).textContent}</a>`;
+    };
+    const prev = pages[i - 1];
+    const next = pages[i + 1];
+    pager.innerHTML = item(prev, 'prev') +
+      (next ? item(next, 'next') : '<a class="pager-next" href="#top"><small>Finished · Home</small>Back to the start</a>');
+    $('.wrap', page).appendChild(pager);
+  });
 
-    let current = null;
-    sections.forEach((s) => { if (s.offsetTop <= y + 120) current = s.id; });
-    if (current === lastActive) return;
-    lastActive = current;
+  function route() {
+    const id = (location.hash || '#top').slice(1);
+    const isPage = pageIds.includes(id);
+    const showHome = !isPage;
+    hero.hidden = !showHome;
+    about.hidden = !showHome;
+    pages.forEach((p) => {
+      const on = p.id === id;
+      p.hidden = !on;
+      if (on) {
+        p.classList.remove('page-in');
+        void p.offsetWidth; // restart the page animation
+        p.classList.add('page-in');
+        $$('.reveal', p).forEach((el) => el.classList.add('in'));
+        document.title = `${$('h2', p).textContent} · PDC60 Portfolio`;
+      }
+    });
+    if (showHome) document.title = 'PDC60 Learning Portfolio · Igor P. Toledano';
+
+    // Highlight the current page in the nav
+    const activeHref = isPage ? '#' + id : (id === 'about' ? '#about' : null);
     links.forEach((a) => {
-      const on = a.getAttribute('href') === '#' + current;
+      const on = a.getAttribute('href') === activeHref;
       a.classList.toggle('active', on);
-      // slide only the nav sideways, never the page
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
       if (on && navList.scrollWidth > navList.clientWidth) {
         const lr = a.getBoundingClientRect();
         const nr = navList.getBoundingClientRect();
@@ -341,6 +355,26 @@
         navList.scrollTo({ left: Math.max(0, left), behavior: 'auto' });
       }
     });
+
+    // New page starts at the top; "About" jumps to its section on the home page
+    const html = document.documentElement;
+    const prevBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    if (id === 'about') window.scrollTo(0, about.getBoundingClientRect().top + window.scrollY - NAV_H + 20);
+    else window.scrollTo(0, 0);
+    html.style.scrollBehavior = prevBehavior;
+    onScroll();
+  }
+
+  /* ---------- Progress bar, back-to-top ---------- */
+  const bar = $('#progress');
+  const toTop = $('#to-top');
+  function onScroll() {
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+    toTop.classList.toggle('on', y > 700);
+    $('.nav').classList.toggle('scrolled', y > 10);
   }
   let ticking = false;
   window.addEventListener('scroll', () => {
@@ -348,6 +382,7 @@
     ticking = true;
     requestAnimationFrame(() => { onScroll(); ticking = false; });
   }, { passive: true });
-  onScroll();
+  window.addEventListener('hashchange', route);
+  route();
   toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 })();
