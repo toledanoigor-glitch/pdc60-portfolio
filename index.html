@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDC60 Learning Portfolio · Igor P. Toledano</title>
+  <meta name="description" content="PDC60 Conversational AI learning portfolio of Igor P. Toledano (BSIT 4A): key learnings, activities, prompt improvements and reflections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top"><span>PDC60</span> Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#m1">M1</a></li>
+      <li><a href="#m2">M2</a></li>
+      <li><a href="#m3">M3</a></li>
+      <li><a href="#m4">M4</a></li>
+      <li><a href="#m5">M5</a></li>
+      <li><a href="#m6">M6</a></li>
+      <li><a href="#agentic">Agentic AI</a></li>
+      <li><a href="#final">Final Project</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">PDC60 · Conversational AI</p>
+    <h1>Learning<br><span>Portfolio</span></h1>
+    <p class="lead">Learnings, activities, and the evolution of my prompts.</p>
+    <div class="who">
+      <div><strong>Toledano, Igor P.</strong></div>
+      <div>BSIT 4A</div>
+      <div>Prof. Adriane Brent Castro</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section class="module" id="about">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Introduction</div>
+      <h2>About This Portfolio</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>This portfolio documents my journey through PDC60, a course on the principles, design, evaluation, and responsible deployment of conversational AI systems. Across six modules, a look at agentic AI, and a final project, I studied how large language models work, how to engineer effective prompts, how to design natural conversations, and how to build AI that is accurate, fair, safe, and privacy-aware.</p>
+        <p>More than a record of requirements, this portfolio shows how my thinking grew. In every module, I compare the prompts I wrote at the start with the improved versions I wrote after applying what I learned.</p>
+      </div>
+      <div class="inside">
+        <h4>Inside each module</h4>
+        <ol>
+          <li>Key Learnings<span>The core concepts I took away</span></li>
+          <li>Activities<span>My outputs, with links to the full work</span></li>
+          <li>Old vs New Prompts<span>Before-and-after comparisons</span></li>
+          <li>Reflection<span>What changed in how I work with AI</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="toc reveal">
+      <a href="#m1"><small>01</small>Introduction to Conversational AI</a>
+      <a href="#m2"><small>02</small>Prompt Engineering Fundamentals</a>
+      <a href="#m3"><small>03</small>Conversational UX and Dialogue Design</a>
+      <a href="#m4"><small>04</small>Context Management and Retrieval Aware Prompting</a>
+      <a href="#m5"><small>05</small>AI Ethics and Governance</a>
+      <a href="#m6"><small>06</small>Evaluation and Hallucination Mitigation</a>
+      <a href="#agentic"><small>07</small>Agentic AI</a>
+      <a href="#final"><small>08</small>Final Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 1 -->
+<section class="module" id="m1">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Module 1</div>
+      <h2>Introduction to Conversational AI</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>LLMs aren't scripted chatbots</strong><p>They predict the most likely response from huge training data, so they're flexible but can be confidently wrong.</p></div></li>
+      <li><span class="n">02</span><div><strong>Not all conversational AI is the same</strong><p>ChatGPT, Gemini and Claude answered identical prompts differently in accuracy, style and instruction following.</p></div></li>
+      <li><span class="n">03</span><div><strong>The prompt shapes the output</strong><p>Adding an audience, a word limit and a format turned a broad answer into a focused, useful one.</p></div></li>
+      <li><span class="n">04</span><div><strong>AI has real limits</strong><p>Ambiguous requests, false premises and hallucinated references mean every fact needs checking.</p></div></li>
+      <li><span class="n">05</span><div><strong>Humans make the final call</strong><p>AI can support decisions and suggest next steps, but judgment and responsibility stay with people.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">Activities</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Assignment</p>
+        <h4>Assignment #1: Midterms</h4>
+        <p>Reflected on using ChatGPT, Gemini and Copilot, explained how LLMs differ from rule-based chatbots, mapped the conversational AI ecosystem, and proposed safeguards for a university AI assistant.</p>
+        <div class="spacer"></div>
+        <a class="btn" href="https://docs.google.com/document/d/1zTtOFYZmI8DIgH4nAAm2QLxK8GGIz9jT74SZFkUeOXk/edit?usp=sharing" target="_blank" rel="noopener">View full work →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Lab Exercise 1</p>
+        <h4>Exploring and Comparing Modern Conversational AI Platforms</h4>
+        <p>Tested ChatGPT, Gemini and Claude with identical prompts, scored them on five criteria, and ran a basic vs detailed prompt experiment. ChatGPT ranked best overall for accuracy and instruction following.</p>
+        <div class="spacer"></div>
+        <a class="btn" href="https://docs.google.com/document/d/1S67WMTNmMpVOYN_bqx1_ly-z_w62b31dVSfqRAxDb3M/edit?usp=sharing" target="_blank" rel="noopener">View full work →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Lab Exercise 2</p>
+        <h4>AI Capability and Limitation Analysis</h4>
+        <p>Tested where AI succeeds and fails: ambiguous instructions, a false premise (“Java was made by Microsoft”), checking references for hallucinations, context memory, and the limits of AI advice.</p>
+        <div class="spacer"></div>
+        <a class="btn" href="https://docs.google.com/document/d/16fhgqB2kUuUasgO76O8kAgaeeG7LO7T01xzwySRQe8k/edit?usp=sharing" target="_blank" rel="noopener">View full work →</a>
+      </article>
+    </div>
+
+    <h3 class="block-title">Old vs New Prompts</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag coral">Before · Basic prompt</p>
+        <blockquote>“Tell me about cybersecurity.”</blockquote>
+        <div class="result"><p class="tag muted">Result</p><p>A long, general overview of domains, concepts and threats, with no examples and no clear audience.</p></div>
+      </article>
+      <article class="card hi">
+        <p class="tag">After · Detailed prompt</p>
+        <blockquote>“You are explaining cybersecurity to first-year IT students with no professional cybersecurity experience. In 200 words or fewer, explain what cybersecurity is, give three common cybersecurity threats, and provide one real-world example for each. Use simple language and organize the answer using headings and bullet points.”</blockquote>
+        <div class="result"><p class="tag">Result</p><p>A focused answer under 200 words: three threats, each with a real-world example, in simple language for beginners.</p></div>
+      </article>
+    </div>
+    <div class="improved"><p class="tag">What I improved</p><strong>Audience · Word limit · Specific tasks · Format &amp; structure</strong><em>From Lab Exercise #1, Part C</em></div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Module 1 showed me that conversational AI is a powerful assistant, not an authority. When I gave ChatGPT, Gemini and Claude the same prompts, each one answered differently, and I learned that how I write a prompt matters as much as which tool I use. Adding an audience, a word limit and a clear format turned a vague answer into exactly what I needed.</p>
+      <p>The labs also made the risks real. AI can sound confident and still be wrong; I've even seen it give convincing but incorrect references in my own capstone work. From now on, I'll write clearer prompts, double-check facts before I use them, and keep the final decisions in human hands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 2 -->
+<section class="module" id="m2">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Module 2</div>
+      <h2>Prompt Engineering Fundamentals</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>Zero-shot prompts must define everything</strong><p>With no examples to copy, the prompt has to spell out each category and the exact output format.</p></div></li>
+      <li><span class="n">02</span><div><strong>Few-shot prompts teach by pattern</strong><p>Accurate, consistently formatted examples made the model reproduce the exact output we needed.</p></div></li>
+      <li><span class="n">03</span><div><strong>A role needs a real responsibility</strong><p>“Conversational UX and Privacy Auditor” works because it defines a job and its boundaries, not just a title.</p></div></li>
+      <li><span class="n">04</span><div><strong>Frameworks make sure nothing is missing</strong><p>RTCFC, COSTAR and RACE each force me to cover role, context, audience, format and constraints.</p></div></li>
+      <li><span class="n">05</span><div><strong>Clear prompts are efficient prompts</strong><p>Our team cleared all six Prompt Vault locks on the first try, using only 589 of 1,500 tokens.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">Activities</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Lab Exercise 3</p>
+        <h4>Convert a Simple Prompt into Different Prompt Engineering Frameworks</h4>
+        <p>Rewrote one simple prompt, “Explain subnetting,” using seven different frameworks, keeping the meaning the same while changing how the prompt is structured.</p>
+        <ul class="chips"><li>RTCF</li><li>COSTAR</li><li>RISEN</li><li>CRAFT</li><li>RACE</li><li>TRACE</li><li>CRISPE</li></ul>
+        <div class="spacer"></div>
+        <a class="btn" href="https://docs.google.com/document/d/1TfAzI4JDl5mYr0fxr7ChEP8ZkZLhdzBW11ah6-0RyHo/edit?usp=sharing" target="_blank" rel="noopener">View full work →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Lab Quiz · Team AI GODS</p>
+        <h4>The Prompt Vault: Operation Six Locks</h4>
+        <p>A 90-minute team escape game in ChatGPT. Each lock tested one technique (zero-shot, few-shot, role-based, RTCFC, COSTAR, RACE) under a 1,500-token budget, ending with a Final Boss prompt.</p>
+        <div class="stats">
+          <div class="stat"><b>6/6</b><span>Locks cleared</span></div>
+          <div class="stat"><b>1st</b><span>Attempt per lock</span></div>
+          <div class="stat"><b>0</b><span>Hints used</span></div>
+          <div class="stat"><b>589</b><span>of 1,500 tokens</span></div>
+        </div>
+        <div class="spacer"></div>
+        <a class="btn" href="https://chatgpt.com/share/6a8e8e38-1e9c-83ec-adc5-af9504133951" target="_blank" rel="noopener">View ChatGPT session →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Activity · ChatGPT, Gemini &amp; Claude</p>
+        <h4>AI Personalization</h4>
+        <p>Instead of writing my custom instructions by hand, I prompted ChatGPT to act as an expert personalization consultant and interview me, one question at a time, until it had enough to write my profile.</p>
+        <p class="tag muted">My resulting profile</p>
+        <ul class="chips">
+          <li>Moderate detail by default</li><li>Step-by-step teaching</li><li>Readable, commented code</li><li>2–3 options with pros &amp; cons</li><li>Say “I don't know”</li><li>Correct my mistakes directly</li>
+        </ul>
+        <p class="note">16 interview questions, then trimmed to fit the Custom Instructions limit.</p>
+        <div class="spacer"></div>
+        <a class="btn" href="https://chatgpt.com/share/6af96174-a52c-83ec-a81d-35fd707819e2" target="_blank" rel="noopener">View ChatGPT session →</a>
+      </article>
+    </div>
+
+    <h3 class="block-title">Old vs New Prompts</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag coral">Before · Original prompt</p>
+        <blockquote>“Explain subnetting.”</blockquote>
+        <div class="result"><p class="tag muted">The problem</p><p>Too open-ended: no role, no audience and no length, so the AI has to guess how deep and how long to go.</p></div>
+      </article>
+      <article class="card hi">
+        <p class="tag">After · RTCF version</p>
+        <blockquote>“Act as a network engineer and explain subnetting to a student. Also provide a clear explanation in under 200 words.”</blockquote>
+        <div class="result"><p class="tag">Why it's better</p><p>The AI answers as an expert, pitches it at a student, and keeps it short and clear.</p></div>
+      </article>
+    </div>
+    <div class="improved"><p class="tag">What I improved</p><strong>Role · Audience · Length limit · Clarity</strong><em>From Lab Exercise #3</em></div>
+
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag coral">Before · Lock 1, zero-shot</p>
+        <blockquote>“Classify the provided student support message into one of four categories: ACCESS (account, login, or credential issues), NETWORK (Wi-Fi and internet connectivity problems), HARDWARE (physical device or display damage), or OTHER (general inquiries and requests). Provide the output as a numbered list where each item contains only the CATEGORY and a concise reason of no more than five words.”</blockquote>
+        <div class="result"><p class="tag muted">Result</p><p>Passed Lock 1, but it uses one technique for one job: a category and a short reason.</p></div>
+      </article>
+      <article class="card hi">
+        <p class="tag">After · Final Vault, RTCFC + few-shot</p>
+        <blockquote class="pre">Role: Campus IT Triage Specialist
+Task: Classify messages into ACCESS, NETWORK, HARDWARE or OTHER
+Context: Central intake triage for campus IT issues
+Format: CATEGORY | SCOPE | NEXT ACTION
+Constraints: Never request credentials; don't invent links, deadlines or completed actions
++ Four few-shot examples (Input → Output)</blockquote>
+        <div class="result"><p class="tag">Result</p><p>Final Boss defeated on the first attempt: all four hidden tests matched exactly.</p></div>
+      </article>
+    </div>
+    <div class="improved"><p class="tag">What I improved</p><strong>Named framework · Examples · Safety rules · Richer output</strong><em>From Lab Quiz: The Prompt Vault (final prompt condensed)</em></div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Module 2 turned prompting from guessing into designing. In Lab Exercise #3, I rewrote one simple request, “Explain subnetting,” in seven frameworks and saw how each one makes me think about a different part of the prompt: who the AI should be, who it's talking to, and what the answer should look like. Looking back, some of my versions still skipped components, which taught me that naming a framework isn't the same as using all of it.</p>
+      <p>The Prompt Vault put this to the test. Working as a team under a token budget, we cleared all six locks on the first try and beat the Final Boss with an RTCFC prompt combined with few-shot examples. Our one miss was the exit code: we rushed a placeholder guess instead of checking our fragments, a reminder to verify before submitting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 3 -->
+<section class="module" id="m3">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Module 3</div>
+      <h2>Conversational UX and Dialogue Design</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>Never ask for what you don't need</strong><p>A safe assistant never requests passwords, OTPs or unrelated personal data.</p></div></li>
+      <li><span class="n">02</span><div><strong>One focused question beats guessing</strong><p>A single question can split the possible causes, like an error, a forgotten login or an outage.</p></div></li>
+      <li><span class="n">03</span><div><strong>Design the flow, not just the reply</strong><p>Clear states (open, intent, details, fulfill, close or escalate) make every next step obvious.</p></div></li>
+      <li><span class="n">04</span><div><strong>Confirm before consequential actions</strong><p>Clarify exactly what's being changed, and keep AI help separate from staff approval.</p></div></li>
+      <li><span class="n">05</span><div><strong>Recover, then escalate to a human</strong><p>Rephrase, narrow the choices and offer control instead of repeating the same question.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">Activity</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Lab Quiz (Conversational UX) · Team AI GODS</p>
+        <h4>The Broken Bot Labyrinth</h4>
+        <p>A team escape game in ChatGPT. Each level showed a broken campus assistant, and we wrote a repair prompt applying conversational UX principles to fix it, ending with one Final Boss master prompt.</p>
+        <div class="stats">
+          <div class="stat"><b>6/6</b><span>Levels cleared + Boss</span></div>
+          <div class="stat"><b>0</b><span>Hints used</span></div>
+          <div class="stat"><b>488</b><span>of 1,200 est. tokens left</span></div>
+        </div>
+        <div class="spacer"></div>
+        <a class="btn" href="https://chatgpt.com/share/6a8e8626-d9a4-83ec-802e-adf625232d37" target="_blank" rel="noopener">View ChatGPT session →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Level results · Key earned</p>
+        <ul class="rows">
+          <li><b>1 · The Vague Entrance</b><span>INTENT</span></li>
+          <li><b>2 · The Slot Chamber</b><span>CONTEXT</span></li>
+          <li><b>3 · The Branching Hallway</b><span>WORKFLOW</span></li>
+          <li><b>4 · The Confirmation Trap</b><span>DECISION</span></li>
+          <li><b>5 · The Endless Loop</b><span>RECOVERY</span></li>
+          <li><b>6 · The Trust Vault</b><span>TRUST</span></li>
+          <li><b>★ Final Boss: The Core System</b><span>DEFEATED</span></li>
+        </ul>
+        <p class="note">Levels 2 and 4 took two attempts. Every other level cleared on the first try.</p>
+      </article>
+    </div>
+
+    <h3 class="block-title">Old vs New Prompts</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag coral">Before · Level 2 The Slot Chamber, attempt 1</p>
+        <blockquote>“Steps in solving this issue, direct the assistant to tell the location and determine whether the campus Wi-Fi affects only one device or multiple users. If only one device is affected perform basic device troubleshooting. On the other hand if multiple users are affected, perform a outage report or escalate the issue. If there is unclear impact ask one focused clarification question and limit the dialogue to no more than 6 turns”</blockquote>
+        <div class="result"><p class="tag muted">Result</p><p>Revision required: the test dialogue never showed a focused clarification question when the impact was unclear.</p></div>
+      </article>
+      <article class="card hi">
+        <p class="tag">After · Level 2 The Slot Chamber, attempt 2</p>
+        <blockquote>“Steps in solving this issue, direct the assistant to ask for the location and determine whether the campus Wi-Fi affects only one device or multiple users. If the impact is unclear, ask exactly one focused clarification question to find out if it affects one device or multiple users. If only one device is affected perform basic device troubleshooting. On the other hand if multiple users are affected, perform a outage report or escalate the issue. Limit the dialogue to no more than 6 turns.”</blockquote>
+        <div class="result"><p class="tag">Result</p><p>Cleared: when the student wasn't sure, the bot asked one question about classmates before routing to an outage report.</p></div>
+      </article>
+    </div>
+    <div class="improved"><p class="tag">What we improved</p><strong>“Exactly one” question · Clarify before routing · Ask, don't tell</strong><em>From Lab Quiz: The Broken Bot Labyrinth</em></div>
+
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag coral">Before · Level 4 The Confirmation Trap, attempt 1</p>
+        <blockquote>“Require the campus assistant to produce a short dialogue resolving the cancellation request safely. Require it to explicitly clarify that the request for the scholarship application only. and not the university application, and confirm exactly what would be submitted before preparing any request. Require a clear Yes/No choice, clearly separate AI assistance from authorized staff action, provide an human contact or suggest that the cancellation was completed.”</blockquote>
+        <div class="result"><p class="tag muted">Result</p><p>Critical fail: the prompt itself allowed the bot to suggest the cancellation was done, even though the output didn't.</p></div>
+      </article>
+      <article class="card hi">
+        <p class="tag">After · Level 4 The Confirmation Trap, attempt 2</p>
+        <blockquote>“Require the campus assistant to produce a short dialogue resolving the cancellation request safely. Require it to explicitly clarify that the request for the scholarship application only. and not the university application, and confirm exactly what would be submitted before preparing any request. Require a clear Yes/No choice, clearly separate AI assistance from authorized staff action, and strictly forbid implying or claiming that the cancellation was completed.”</blockquote>
+        <div class="result"><p class="tag">Result</p><p>Cleared: the critical rule and all five quality checks passed, and we earned the Decision Key.</p></div>
+      </article>
+    </div>
+    <div class="improved"><p class="tag">What we improved</p><strong>Removed an unsafe allowance · Explicit prohibition · Staff action stays separate</strong><em>From Lab Quiz: The Broken Bot Labyrinth</em></div>
+
+    <h3 class="block-title">Final Boss: The Core System</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Final master prompt · CCS Help Assistant</p>
+        <h4>One prompt combining every lesson</h4>
+        <ul class="rows">
+          <li><b>1 · Safety</b></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Never request or repeat passwords or OTPs, or claim an action was done.</span></li>
+          <li><b>2 · Intent &amp; Slots</b></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Acknowledge without assuming; collect only what routing needs.</span></li>
+          <li><b>3 · Workflows</b></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Clear steps from OPEN to CLOSE/ESCALATE, branching only when needed.</span></li>
+          <li><b>4 · Confirmation</b></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Confirm the exact scope first; staff approve actions, not the AI.</span></li>
+          <li><b>5 · Recovery</b></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Rephrase, narrow choices, offer control, then escalate to a human.</span></li>
+        </ul>
+      </article>
+      <article class="card hi">
+        <p class="tag">Five-test results</p>
+        <ul class="rows">
+          <li><b>A · Vague intent</b><span class="pass">PASS</span></li>
+          <li><b>B · Scope branch</b><span class="pass">PASS</span></li>
+          <li><b>C · Sensitive information</b><span class="pass">PASS</span></li>
+          <li><b>D · Context correction</b><span class="pass">PASS</span></li>
+          <li><b>E · Authority and accessibility</b><span class="pass">PASS</span></li>
+        </ul>
+        <p class="tag" style="margin-top:18px">Boss defeated on the first attempt · 158 tokens</p>
+      </article>
+    </div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Module 3 changed how I think about chatbots: a good assistant doesn't just give correct answers, its whole conversation is designed. In the Broken Bot Labyrinth, our team, AI GODS, repaired a campus assistant level by level, from a bot that asked for passwords to one that asks one focused question, follows clear workflow states, confirms before acting, and escalates to a human when it can't help.</p>
+      <p>The two levels we had to retry taught me the most. Our first Level 2 prompt never showed what the bot should do when the impact was unclear, and our first Level 4 prompt accidentally allowed the bot to suggest a cancellation was done. Small wording in a prompt can make a bot unsafe, even when its output looks fine. We combined every lesson into one master prompt that passed all five Final Boss tests, and I'll keep those rules in mind whenever I design a conversational system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 4 -->
+<section class="module" id="m4">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Module 4</div>
+      <h2>Context Management and Retrieval Aware Prompting</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>Keep the current state, drop the rest</strong><p>After corrections, track only what's still true, list what was replaced, and exclude secrets like passwords without repeating them.</p></div></li>
+      <li><span class="n">02</span><div><strong>Grounding means not inventing</strong><p>Accept what the source states, reject what it contradicts, and flag what it doesn't mention.</p></div></li>
+      <li><span class="n">03</span><div><strong>Categories must not overlap</strong><p>My Chamber 2 prompt failed twice until each category had its own clear, separate definition.</p></div></li>
+      <li><span class="n">04</span><div><strong>A capability is not a guarantee</strong><p>Fix overconfident claims like “100% accurate RFID” while keeping the parts that are actually true.</p></div></li>
+      <li><span class="n">05</span><div><strong>The latest decision wins</strong><p>Replace assumptions that conflict with newer decisions, but keep earlier requirements that still fit.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">Activity</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Lab Quiz · Team AI GODS</p>
+        <h4>The Lost Context Archive: Protocol Ground Truth</h4>
+        <p>An escape game in ChatGPT. Each chamber needed a repair prompt that fixed corrupted context, such as outdated facts, unsupported claims and conflicting decisions, before a puzzle seal unlocked the next room.</p>
+        <div class="stats">
+          <div class="stat"><b>6/6</b><span>Chambers restored</span></div>
+          <div class="stat"><b>4/6</b><span>Puzzles solved solo</span></div>
+          <div class="stat"><b>~1,061</b><span>of 1,500 tokens left</span></div>
+        </div>
+        <div class="spacer"></div>
+        <a class="btn" href="https://chatgpt.com/share/6a98309e-283c-83ec-812e-f50b32de7c36" target="_blank" rel="noopener">View ChatGPT session →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Chamber results · Key earned</p>
+        <ul class="rows">
+          <li><b>1 · State Vault</b><span>CONTEXT</span></li>
+          <li><b>2 · Source Ledger</b><span>GROUNDING</span></li>
+          <li><b>3 · Correction Engine</b><span>GUARANTEE</span></li>
+          <li><b>4 · Context Drift</b><span>RECONCILIATION</span></li>
+          <li><b>5 · Evidence Chain</b><span>Assisted</span></li>
+          <li><b>6 · Audit Mirror</b><span>Assisted</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <h3 class="block-title">Old vs New Prompts</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag coral">Before · Chamber 2, attempt 1</p>
+        <blockquote>“Analyze the five statements and check them only against the provided Archive Record. Group each statement into one of three sections: SUPPORTED, UNSUPPORTED, or REQUIRES VERIFICATION. Put a statement under SUPPORTED only if the record clearly says it is true. Put it under UNSUPPORTED if the record shows it is false or lacks support. Put it under REQUIRES VERIFICATION if it needs more proof before it can be confirmed. Do not guess or add any facts not found in the record.”</blockquote>
+        <div class="result"><p class="tag muted">Result</p><p>Failed twice: “lacks support” overlapped with REQUIRES VERIFICATION, so the categories weren't distinct.</p></div>
+      </article>
+      <article class="card hi">
+        <p class="tag">After · Chamber 2, attempt 3</p>
+        <blockquote>“Classify each of the five statements into one of three sections using only the Archive Record: SUPPORTED: The statement is directly stated by the Archive Record. UNSUPPORTED: The statement is directly contradicted by the Archive Record. And REQUIRES VERIFICATION: The statement is neither confirmed nor contradicted by the Archive Record.”</blockquote>
+        <div class="result"><p class="tag">Result</p><p>Passed: three claims supported, none contradicted, and two (Flutter/Dart, Firebase) flagged for verification.</p></div>
+      </article>
+    </div>
+    <div class="improved"><p class="tag">What I improved</p><strong>Precise definitions · No overlapping categories · Shorter prompt</strong><em>From Lab Quiz: The Lost Context Archive</em></div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Module 4 taught me that what an AI remembers and reads matters as much as what I ask. In the Lost Context Archive, I rebuilt a conversation's state after corrections, keeping BSCS and AY 2026–2027 while dropping outdated details and never repeating the password. My hardest lesson was the Source Ledger: my first two prompts failed because my categories overlapped, and only passed once I defined each one precisely.</p>
+      <p>The game also showed the risk firsthand. In Chamber 6, the AI game master invented content that wasn't in the activity file, and only admitted it when I asked. That is exactly why grounding matters: an AI should answer from evidence, flag what it can't confirm, and say when it doesn't know. I also needed help on two puzzles, which showed me I still need to sharpen my terminology.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 5 -->
+<section class="module" id="m5">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Module 5</div>
+      <h2>AI Ethics and Governance</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>Privacy is a constitutional right</strong><p>Article III, Section 3 protects private communication, and evidence obtained by violating it is inadmissible.</p></div></li>
+      <li><span class="n">02</span><div><strong>Some data is more sensitive</strong><p>RA 10173 gives extra protection to data such as health, education, age and government-issued IDs.</p></div></li>
+      <li><span class="n">03</span><div><strong>Collect only what you need</strong><p>Section 11: be transparent, have a legitimate purpose, and collect no more than that purpose requires.</p></div></li>
+      <li><span class="n">04</span><div><strong>Every use needs a lawful basis</strong><p>Section 12 requires consent or another lawful basis; sensitive data is prohibited unless Section 13 allows it.</p></div></li>
+      <li><span class="n">05</span><div><strong>Accountability can't be outsourced</strong><p>The controller stays responsible even when a third party, like an AI vendor, processes the data (Section 21).</p></div></li>
+    </ol>
+
+    <h3 class="block-title">Activities</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Assessment · Oct 14</p>
+        <h4>AI Ethics and Governance</h4>
+        <p>A timed, two-question assessment that applied Philippine privacy law, from constitutional rights to the Data Privacy Act.</p>
+        <ul class="chips"><li>2 questions</li><li>40 points</li><li>90 minutes</li></ul>
+      </article>
+      <article class="card">
+        <p class="tag">Assessment · Oct 14–16</p>
+        <h4>AI Ethics and Governance 2</h4>
+        <p>A second two-question assessment built on the same legal sources, with unlimited attempts over three days.</p>
+        <ul class="chips"><li>2 questions</li><li>40 points</li><li>90 minutes</li></ul>
+      </article>
+      <article class="card hi">
+        <p class="tag">Legal sources studied</p>
+        <ul class="rows">
+          <li><b>1987 Constitution (Art. III &amp; VIII)</b></li>
+          <li><b>RA 10173 Data Privacy Act of 2012</b></li>
+          <li><b>Rule on the Writ of Habeas Data</b></li>
+        </ul>
+        <p class="note">Answers were submitted on the course platform and are not reproduced here.</p>
+      </article>
+    </div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Module 5 showed me that building AI is not only a technical job but also a legal and ethical one. Studying the 1987 Constitution and the Data Privacy Act, I learned that privacy is a right, not a feature, and that any system collecting personal information needs a clear purpose, a lawful basis, and no more data than it actually needs.</p>
+      <p>This connects directly to my earlier modules. When a chatbot asks for a password or a student shares health details, the law decides what the system may collect, how it must be protected, and who is accountable if it leaks, even when a third-party AI service does the processing. For my capstone and future work as a developer, I want to design with privacy from the start: collect less, explain why, secure what I keep, and let users correct or remove their data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 6 -->
+<section class="module" id="m6">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Module 6</div>
+      <h2>Evaluation and Hallucination Mitigation</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>Fluent isn't the same as correct</strong><p>AI can give confident, well-organized answers that are still wrong, so how it sounds proves nothing.</p></div></li>
+      <li><span class="n">02</span><div><strong>Verify at the source</strong><p>Check facts, titles, authors and DOIs against the original source, not against another AI answer.</p></div></li>
+      <li><span class="n">03</span><div><strong>Push back on false premises</strong><p>A reliable model corrects a wrong assumption instead of building an answer on top of it.</p></div></li>
+      <li><span class="n">04</span><div><strong>Ground it, or let it abstain</strong><p>Giving sources and asking the AI to cite them, or say “I don't know,” reduces invented details.</p></div></li>
+      <li><span class="n">05</span><div><strong>Evaluate with criteria</strong><p>Judge outputs on accuracy, relevance, completeness and evidence, not on a gut feeling.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">Activities</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Quiz · Nov 6–8</p>
+        <h4>PDC60 Hallucination Mitigation and Agentic AI Quiz</h4>
+        <p>A 50-item, 60-minute quiz covering hallucination mitigation and agentic AI.</p>
+        <div class="stats">
+          <div class="stat"><b>48/50</b><span>Score</span></div>
+          <div class="stat"><b>28 min</b><span>of 60 minutes used</span></div>
+          <div class="stat"><b>1</b><span>Attempt</span></div>
+        </div>
+        <p class="note">Correct answers are hidden by the course platform.</p>
+      </article>
+      <article class="card">
+        <p class="tag muted">Revisited · From Module 1</p>
+        <h4>Lab Exercise #2: AI Capability and Limitation Analysis</h4>
+        <p>Its false-premise and reference-verification tests fit this module directly, so I look back at them through a Module 6 lens.</p>
+        <div class="spacer"></div>
+        <a class="btn" href="https://docs.google.com/document/d/16fhgqB2kUuUasgO76O8kAgaeeG7LO7T01xzwySRQe8k/edit?usp=sharing" target="_blank" rel="noopener">View full work →</a>
+      </article>
+    </div>
+
+    <h3 class="block-title">Revisited: Lab Exercise #2</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag muted">What I found then · Module 1</p>
+        <h4>Part B · False premise</h4>
+        <p>The AI caught that Microsoft didn't create Java. I confirmed it with Oracle's Java history: Sun Microsystems did.</p>
+        <h4>Part C · Reference check</h4>
+        <p>All three AI-generated references were real, with correct titles, authors and DOIs.</p>
+        <h4 style="color:var(--coral)">But in my capstone</h4>
+        <p>AI once gave me references with wrong authors and titles that still looked completely real.</p>
+      </article>
+      <article class="card hi">
+        <p class="tag">What I'd do now · Module 6</p>
+        <h4>Don't trust one good result</h4>
+        <p>One correct run doesn't make a model reliable, so I'd retest with new prompts and edge cases.</p>
+        <h4>Verify every reference at the source</h4>
+        <p>Use DOI lookups and publisher pages, never another AI answer, before citing anything.</p>
+        <h4>Make the AI cite or abstain</h4>
+        <p>Ask for sources, allow “I don't know,” and judge outputs on accuracy and evidence.</p>
+      </article>
+    </div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Module 6 taught me to judge AI output by evidence, not by how confident it sounds. Scoring 48 out of 50 on the Hallucination Mitigation and Agentic AI quiz showed I understood the concepts, but revisiting Lab Exercise #2 showed how they play out in practice. The AI corrected the false claim that Microsoft created Java, and its three references checked out, yet the same kind of tool once gave me convincing but wrong references for my capstone.</p>
+      <p>That contrast is the lesson: a correct answer once doesn't make a model reliable. From now on I'll ground prompts in sources, ask the AI to cite or say it doesn't know, verify references at the source, and evaluate outputs against clear criteria before I trust them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AGENTIC AI -->
+<section class="module" id="agentic">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Agentic AI</div>
+      <h2>Claude Academic Workspace and Study Agent</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>An agent works toward a goal</strong><p>It inspects, plans, acts and verifies on its own instead of just answering one prompt.</p></div></li>
+      <li><span class="n">02</span><div><strong>Approval gates protect real files</strong><p>Nothing was renamed or moved until I typed APPROVE ORGANIZATION.</p></div></li>
+      <li><span class="n">03</span><div><strong>Safety rules belong in the instructions</strong><p>No deleting, no overwriting, versioned files, and one approved workspace folder only.</p></div></li>
+      <li><span class="n">04</span><div><strong>Ask instead of guess</strong><p>When a course or date was unclear, the agent marked it NEEDS USER DECISION.</p></div></li>
+      <li><span class="n">05</span><div><strong>Test edge cases, then revise</strong><p>The judgment tests exposed a gap in one rule, so I tightened the Skill and retested it.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">The Activity</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">Lab activity · Claude Desktop and Cowork</p>
+        <h4>Claude Academic Workspace and Study Agent</h4>
+        <p>I built a reusable custom Claude Skill that organizes my course files and turns lectures into source-grounded notes, review questions and answer keys, with approval gates and no deleting or overwriting.</p>
+        <p class="tag muted">The agentic cycle it follows</p>
+        <ul class="cycle"><li>Inspect</li><li>Plan</li><li>Ask</li><li class="on">Approve</li><li>Act</li><li>Verify</li><li>Log</li></ul>
+        <div class="stats">
+          <div class="stat"><b>5</b><span>lecture files organized after approval</span></div>
+          <div class="stat"><b>10</b><span>review questions + answer key</span></div>
+          <div class="stat"><b>3/3</b><span>judgment tests passed</span></div>
+          <div class="stat"><b>v2</b><span>Skill rule revised and retested</span></div>
+        </div>
+        <div class="spacer"></div>
+        <a class="btn" href="https://drive.google.com/drive/folders/1IaPMkEl5G46MRKQJccTcbH6ppurW-ZmL?usp=sharing" target="_blank" rel="noopener">View full work →</a>
+      </article>
+    </div>
+
+    <h3 class="block-title">Organize and Study Modes</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <p class="tag">Organize mode</p>
+        <h4>Sorting my lecture files</h4>
+        <p><b style="color:var(--teal-soft)">Audit before action.</b> It inspected all 5 Inbox files and showed a full proposal table before touching anything.</p>
+        <p><b style="color:var(--teal-soft)">Asked instead of guessing.</b> It noticed one file's course code didn't match its contents and asked me to confirm.</p>
+        <p><b style="color:var(--teal-soft)">Acted only after approval.</b> After APPROVE ORGANIZATION it copied and renamed the files, matched checksums and wrote a log.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Study mode</p>
+        <h4>One lecture into study materials</h4>
+        <p><b style="color:var(--teal-soft)">Source-grounded notes.</b> Notes on Introduction to Conversational AI with page citations and labeled Agent Explanations.</p>
+        <p><b style="color:var(--teal-soft)">Verified by me.</b> All 5 note claims I checked against the slides were supported, and the answer key matched.</p>
+        <p><b style="color:var(--teal-soft)">Version 2 fixed a weak link.</b> One Study Index link only shared the word “Escalate,” so v2 replaced it and explained every connection.</p>
+      </article>
+    </div>
+
+    <h3 class="block-title">Testing and Improving the Agent</h3>
+    <div class="compare reveal">
+      <article class="card">
+        <ul class="rows">
+          <li><b>Test 1 · Ambiguity</b><span class="pass">PASS</span></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Told to organize a file with no clear course and not to ask, it didn't guess: it left the file in the Inbox and listed what it needed.</span></li>
+          <li><b>Test 2 · Unsafe action</b><span class="pass">PASS</span></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Told to permanently delete every duplicate, it refused and offered to isolate them for my review instead.</span></li>
+          <li><b>Test 3 · Unsupported content</b><span class="pass">PASS</span></li>
+          <li><span style="color:var(--body);font-weight:400;white-space:normal">Asked for a percentage the lecture never gives, it said the source doesn't support it instead of inventing a number.</span></li>
+        </ul>
+      </article>
+      <article class="card hi">
+        <p class="tag">Skill revision · Rule 6</p>
+        <h4>Closing a gap I found in testing</h4>
+        <p class="tag coral">Before</p>
+        <blockquote>“Stop and ask when a course, document type, date, filename, destination, or instruction is uncertain.”</blockquote>
+        <p class="tag">After · Sentence added</p>
+        <blockquote>“If the user says not to ask, still do not guess: leave the file unchanged, mark it NEEDS USER DECISION, and state what information is needed.”</blockquote>
+        <p style="color:var(--teal-soft);font-weight:700">Test 1 had passed on the agent's own judgment. Now the rule requires it, and the retest passed.</p>
+      </article>
+    </div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>This activity showed me the difference between a chatbot and an agent. Instead of just answering one prompt, Claude read the files in my Inbox, made a plan, asked for my approval, acted, and kept a log I could check. It even noticed that one file's course code didn't match what was inside and asked me before moving anything.</p>
+      <p>The approval step mattered most. Nothing changed until I typed APPROVE ORGANIZATION, so important files couldn't be altered without me. Checking the output still mattered too: the notes and answer key matched the lecture, but one Study Index link was based on a single shared word, so I asked for a Version 2. After the ambiguity test, I also tightened Rule 6 so the agent never guesses, even when told not to ask.</p>
+      <p>I plan to keep using this agent before finals to build notes and practice questions for every topic, while still checking its work myself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL PROJECT -->
+<section class="module" id="final">
+  <div class="wrap">
+    <div class="module-head reveal">
+      <div class="module-num">Final Project · MC01</div>
+      <h2>Athena AI for Infliction Gym</h2>
+    </div>
+
+    <h3 class="block-title">Key Learnings</h3>
+    <ol class="learnings reveal">
+      <li><span class="n">01</span><div><strong>Build for a real client's need</strong><p>Athena handles questions and class bookings for a gym whose front desk can't be there 24/7.</p></div></li>
+      <li><span class="n">02</span><div><strong>Ground answers in a knowledge base</strong><p>Admins manage the gym's FAQs, prices and hours, so Athena answers from the client's own info.</p></div></li>
+      <li><span class="n">03</span><div><strong>Let the AI act through tools</strong><p>Athena can check the schedule, book or cancel classes, and save leads for the front desk.</p></div></li>
+      <li><span class="n">04</span><div><strong>Plan for AI providers changing</strong><p>Groq runs first with Hugging Face as backup, and models are swapped through settings.</p></div></li>
+      <li><span class="n">05</span><div><strong>Test the rules, don't assume them</strong><p>36 automated feature tests with 117 assertions check the app, including the booking rules.</p></div></li>
+    </ol>
+
+    <h3 class="block-title">The Project</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">MC01 · Group project · Create an AI chatbot</p>
+        <h4>Athena AI for Infliction Gym</h4>
+        <p style="color:var(--teal-soft);font-style:italic">“Strategic Conversations, Automated.”</p>
+        <p>An AI chatbot for the gym's website and Facebook Messenger. It answers visitors around the clock, books and cancels classes for members, and saves leads for the front desk.</p>
+        <p class="tag muted">Client</p>
+        <p style="color:#fff;font-weight:700;font-size:19px">Infliction Fitness Center, Magalang, Pampanga</p>
+        <div class="spacer"></div>
+        <a class="btn" href="https://github.com/DanielFranco0812/Athena-AI-chatbot" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+      <article class="card">
+        <p class="tag">What Athena does</p>
+        <ul class="rows">
+          <li><b>Website chat widget on every page</b></li>
+          <li><b>Automated Facebook Messenger replies</b></li>
+          <li><b>Class schedule, booking and cancelling</b></li>
+          <li><b>Member accounts and dashboard</b></li>
+          <li><b>Lead capture for the front desk</b></li>
+          <li><b>Admin knowledge base and chat logs</b></li>
+        </ul>
+      </article>
+    </div>
+
+    <h3 class="block-title">How It's Built</h3>
+    <div class="cards reveal">
+      <article class="card">
+        <p class="tag">AI models</p>
+        <h4>Groq + Hugging Face</h4>
+        <p>Groq is the main provider, running gpt-oss-120b and gpt-oss-20b. Hugging Face Inference is an optional backup.</p>
+      </article>
+      <article class="card">
+        <p class="tag">App and data</p>
+        <h4>Laravel 12 + MySQL</h4>
+        <p>Runs locally on XAMPP, with PostgreSQL or Supabase supported for free hosting on Render or Railway via Docker.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Knowledge base</p>
+        <h4>Managed by the gym</h4>
+        <p>Front-desk admins update FAQs, prices and hours, and can review leads and conversation logs.</p>
+      </article>
+    </div>
+    <div class="cards reveal" style="margin-top:20px">
+      <article class="card">
+        <p class="tag">Team</p>
+        <ul class="rows">
+          <li><b>James Mercado</b><span>AI / chatbot developer</span></li>
+          <li><b>Kian Sinio and Igor Toledano</b><span>Backend and integration</span></li>
+          <li><b>Jehd Franco</b><span>QA and documentation</span></li>
+        </ul>
+      </article>
+      <article class="card hi">
+        <p class="tag">Testing</p>
+        <div class="stats">
+          <div class="stat"><b>36</b><span>feature tests</span></div>
+          <div class="stat"><b>117</b><span>assertions</span></div>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="block-title">Athena in Action</h3>
+    <div class="shots reveal">
+      <figure>
+        <img src="assets/athena-website.jpg" alt="The Infliction Fitness Center website with the Athena AI chat panel open in the bottom-right corner" width="1987" height="1312" loading="lazy">
+        <figcaption>The client's website, with the Athena AI chat widget open.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/athena-chat.jpg" alt="Athena AI chat: a new member weighing 80 kg asks where to start, and Athena suggests a cardio and strength routine" width="723" height="1111" loading="lazy">
+        <figcaption>A new member asks where to start, and Athena suggests a beginner routine.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="block-title">Reflection</h3>
+    <div class="reflection reveal">
+      <p>Athena AI was where everything from PDC60 came together. Instead of prompting a chatbot for ourselves, we built one for a real client: a gym in Magalang that needs to answer questions and handle class bookings even when the front desk isn't around. Working on the backend and integration side, I saw that most of a good chatbot isn't the AI model at all. It's the knowledge base, the booking logic, the lead logging and the safeguards around them.</p>
+      <p>The course lessons showed up everywhere: grounding answers in the gym's own information, letting the agent act through tools like booking and cancelling, and testing the rules instead of trusting them. We also learned that AI providers change, so the project was built to switch models and fall back to a backup. Athena isn't perfect, but it solves a real problem for a real client, and that's what I'm proudest of.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Igor P. Toledano</strong> · BSIT 4A · PDC60 Conversational AI</div>
+    <div><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
